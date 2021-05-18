@@ -1,33 +1,49 @@
-set hlsearch
-set ignorecase
-command C let@/=""
-set autoindent
-set incsearch
-set linebreak
-set scrolloff=3
-set sidescrolloff=5
-syntax on
-set ruler
-set novisualbell
-set noerrorbells
-set wildmenu
-set number
-set mouse=a
-set background=dark
-set backspace=indent,eol,start
-set confirm
-set history=500
-inoremap <C-d> <esc>ddi
-let mapleader = "-"
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-iabbrev adn and
-iabbrev wahr what
-iabbrev waht what
-iabbrev tehn then
-nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
-nnoremap <leader>< viw<esc>a><esc>bi<<esc>lel
-nnoremap <leader>[ viw<esc>a]<esc>bi[<esc>lel
-nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>lel
-nnoremap <leader>( viw<esc>a)<esc>bi(<esc>lel
-inoremap jk <esc>
+ 1 execute pathogen#infect()
+  2 " ^^ plugin manager
+  3 set hlsearch
+  4 set ignorecase
+  5 command C let@/=""
+  6 set autoindent
+  7 set incsearch
+  8 set linebreak
+  9 set scrolloff=3
+ 10 set sidescrolloff=5
+ 11 syntax on
+ 12 set ruler
+ 13 set novisualbell
+ 14 set noerrorbells
+ 15 set wildmenu
+ 16 set number
+ 17 set mouse=a
+ 18 set background=dark
+ 19 set backspace=indent,eol,start
+ 20 set confirm
+ 21 set history=500
+ 22 inoremap <C-d> <esc>ddi
+ 23 let mapleader = ","
+ 24 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+ 25 nnoremap <leader>sv :source $MYVIMRC<cr>
+ 26 iabbrev adn and
+ 27 iabbrev wahr what
+ 28 iabbrev waht what
+ 29 iabbrev tehn then
+ 30 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+ 31 nnoremap <leader>< viw<esc>a><esc>bi<<esc>lel
+ 32 nnoremap <leader>[ viw<esc>a]<esc>bi[<esc>lel
+ 33 nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>lel
+ 34 nnoremap <leader>( viw<esc>a)<esc>bi(<esc>lel
+ 35 inoremap jk <esc>
+ 36 nnoremap <leader>d viw<esc>lxhbhx
+ 37 vnoremap H 0
+ 38 vnoremap L $
+ 39 nnoremap H 0
+ 40 nnoremap L $
+ 41 set belloff=all
+ 42 inoremap <C-.> <esc>>>i
+ 43 inoremap <C-,> <esc><<i
+ 44
+ 45 "  syntastic configs
+ 46 set statusline+=%{SyntasticStatuslineFlag()}
+ 47 set statusline+=%*
+ 48
+ 49 let g:syntastic_always_populate_loc_list = 1
